@@ -1,0 +1,1 @@
+Ledgerly is a minimal ledger-book style app that lets you create, view, edit, and delete text-based transaction records (files). It's a digital version of traditional "hisaab-kitaab" for personal or small business tracking.

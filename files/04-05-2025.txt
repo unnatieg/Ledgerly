@@ -1,0 +1,6 @@
+Transaction ID: TX001
+Date: 2025-05-01
+Customer Name: UG
+Amount: $150.00
+Transaction Type: Purchase
+Status: Completed  

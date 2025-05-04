@@ -1,0 +1,84 @@
+.page-heading {
+    font-weight: 500;         /* Same thickness as navbar text */
+    font-size: 1.5rem;         /* Clean readable heading */
+    margin-top: 30px;          /* Space between navbar and heading */
+    margin-left: 1rem;
+    color: #343a40;            /* Dark grey like Bootstrap navbar text */
+}
+
+p {
+    margin-left: 1rem;
+}
+
+/* File Item */
+.file-item {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align to the left */
+    align-items: center;
+}
+
+/* Adjust Button Alignment */
+.file-item .buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* This will push the buttons to the right */
+}
+
+/* Styling for buttons */
+.file-item .btn {
+    color: white;
+}
+
+/* Link Styling */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c8cacd; /* Color when the link is hovered */
+}
+
+.form-control{
+    width:50%;
+    margin-left: 12px;
+}
+
+.form-btn
+{
+    margin-left: 12px;
+}
+
+.my-file-content
+{
+    margin-left: 15px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .file-item {
+        flex-direction: column; /* Stack elements on mobile */
+        align-items: flex-start; /* Align to left */
+    }
+
+    .file-item .buttons {
+        justify-content: center; /* Center the buttons on small screens */
+        margin-top: 10px; /* Space between the file name and buttons */
+    }
+}
+
+@media (max-width: 576px) {
+    .file-item {
+        padding: 8px;
+    }
+
+    .page-heading {
+        font-size: 1.2rem; /* Smaller heading on mobile */
+    }
+}

@@ -1,0 +1,4 @@
+04-05-2025  2:03 PM   Payment from Ramesh   +₹1500   Sales
+04-05-2025  3:15 PM   Purchase of Supplies   -₹200    Office Supplies
+04-05-2025  4:45 PM   Electricity Bill       -₹1200   Utilities
+04-05-2025  5:30 PM   Loan Repayment from Mahesh   +₹2500   Loan Repayment

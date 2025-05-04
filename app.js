@@ -25,30 +25,30 @@ app.get("/create-form", (req, res) => {
 
 // file creation api
 
-app.post("/create",(req,res)=>
-{
-
-    const currentDate= new Date();
-    console.log(currentDate);
-    const day= String(currentDate.getDate()).padStart(2,'0');
-    const month = String(currentDate.getMonth()+1).padStart(2,'0');
+app.post("/create", (req, res) => {
+    const currentDate = new Date();
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
     const year = currentDate.getFullYear();
-    const fn= `${day}-${month}-${year}.txt`;
-    const file_content= req.body.content || "Default content";
-    fs.writeFile(`./files/${fn}`, file_content , (err)=>
-    {
-        if (err)
-        {
-            return res.send("Something went wrong");
-        }
-        else
-        {
-            console.log("file creation done");
-            return res.redirect("/"); // Redirecting to home after file is created
-        }
-    })
+    const hours = String(currentDate.getHours()).padStart(2, '0');
+    const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const seconds = String(currentDate.getSeconds()).padStart(2, '0');
+    const time = `${hours}-${minutes}-${seconds}-${ampm}`;
 
+    const fileName = `${day}-${month}-${year}_${time}.txt`;
+    const fileContent = req.body.content || "Default content";
+
+    fs.writeFile(`./files/${fileName}`, fileContent, (err) => {
+        if (err) {
+            return res.send("Something went wrong");
+        } else {
+            console.log("File created:", fileName);
+            return res.redirect("/");
+        }
+    });
 });
+
 
 // viewing a file API
 

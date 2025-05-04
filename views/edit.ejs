@@ -22,7 +22,7 @@
             </div>
         </div>
     </nav>
-    <p class="page-heading">   You're editing the record of <%= file_info.split(".")[0]  %> date </p>
+    <p class="page-heading">   You're editing the record of <%= file_info.split("_")[0]  %> date </p>
     <form action="/update/<%= file_info %>" method="POST">
         <div class="form-group">
             <textarea class="form-control" id="content" name="updated_data" rows="10"  required> <%= data %> </textarea>
